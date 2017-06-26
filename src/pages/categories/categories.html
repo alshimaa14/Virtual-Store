@@ -1,0 +1,54 @@
+<ion-header>
+    <header myTitle="Categories"></header>
+</ion-header>
+
+
+<!--<ion-content padding>-->
+<!--
+    <ion-grid *ngIf="ListCategory().length>0">
+        <ion-row>
+            <ion-col col-6 *ngFor="let catagory of ListCategory()">
+                <ion-card>
+                    <img src="../../assets/img/card-sf.jpg" (click)="showSubCategories($event,catagory.idcategory,catagory.name)" />
+                    <ion-card-content>
+                        <ion-card-title text-center (click)="showSubCategories($event,catagory.idcategory,catagory.name)">
+                            <a href="#" id="catName">{{catagory.name}}</a>
+                        </ion-card-title>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>-->
+
+<ion-content class="card-background-page">
+
+    <div *ngIf="ListCategory().length>0">
+        <ion-card *ngFor="let catagory of ListCategory()">
+            <img src="{{catagory.image}}" (click)="showSubCategories($event,catagory.idcategory,catagory.name)" />
+            <div class="card-title" (click)="showSubCategories($event,catagory.idcategory,catagory.name)">{{catagory.name}}</div>
+        </ion-card>
+    </div>
+
+    <div *ngIf="ListCategory().length == 0" style="text-align:center; color:grey">
+        <h4>Empty</h4>
+    </div>
+
+    <!--<ion-card>
+        <img src="http://www.foodbusinessnews.net/-/media/ImagesNew/FoodBusinessNews/Features-2016/2/PepsiBevs_Embedded.jpg" />
+        <div class="card-title">Beverages</div>
+    </ion-card>
+
+    <ion-card>
+
+        <img src="https://www.yourbestdigs.com/wp-content/uploads/2017/02/runner-up-detergents.jpg" />
+        <div class="card-title">Detergents</div>
+    </ion-card>-->
+
+
+
+</ion-content>
+
+
+
+
+<!--</ion-content>-->

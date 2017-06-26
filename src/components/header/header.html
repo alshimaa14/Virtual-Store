@@ -1,0 +1,17 @@
+
+
+<ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>{{text}}</ion-title>
+
+    <ion-buttons end *ngIf="user_email != null">
+        <button ion-button icon-only id="notifications-button" (click)="showCartPage()">
+        <ion-icon name="cart"></ion-icon>
+          <ion-badge item-end id="notifications-badge" *ngIf="checkArrLength()>0">{{checkArrLength()}}</ion-badge>
+
+      </button>
+    </ion-buttons>
+</ion-navbar>

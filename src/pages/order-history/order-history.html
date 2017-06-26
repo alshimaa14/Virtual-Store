@@ -1,0 +1,23 @@
+<ion-header>
+
+    <header myTitle="Order History"></header>
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+    <div *ngIf="getUserOders().length > 0">
+        <ion-list *ngFor="let order of getUserOders();" style="text-align:center">
+            <button (click)="showOrderHistory(order.idorder,order.ordertime,order.deliverytime,order.totalprice)"><a href=""> {{ order.ordertime}}</a></button>
+        </ion-list>
+    </div>
+
+    <div *ngIf="getUserOders().length == 0" style="text-align:center; color:grey">
+        <h4>Empty</h4>
+    </div>
+
+
+
+</ion-content>

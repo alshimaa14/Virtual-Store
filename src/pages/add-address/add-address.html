@@ -1,0 +1,40 @@
+
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Add Address</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    
+    <form name="myForm" novalidate>
+        <ion-item>
+            <button (click)="get_location($event)" ion-button full large>Get location</button>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>State</ion-label>
+            <ion-input type="text" class="inputText" required #state value="{{getState()}}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>City</ion-label>
+            <ion-input type="text" class="inputText" required #city value="{{getCity()}}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Street</ion-label>
+            <ion-input type="text" class="inputText" required #street value="{{getStreet()}}"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+            <button (click)="addAddress(state.value,city.value,street.value)"  ion-button block large>Add Address</button>
+        </ion-item>
+
+    </form>
+
+</ion-content>     

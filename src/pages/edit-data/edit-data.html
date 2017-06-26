@@ -1,0 +1,63 @@
+<ion-header>
+
+    <header myTitle="Edit"></header>
+
+</ion-header>
+
+
+
+
+<ion-content padding>
+    <!--
+    <div *ngFor="let user of getUserData()">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <input type="text" class="inputText" value={{user.name}} full #name>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <input type="text" class="inputText" value={{user.email}} #email>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <input type="password" class="inputText" placeholder="enter password" #pass>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <button (click)="editData(name.value,email.value,pass.value)" ion-button full icon-left>Apply change</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>-->
+
+    <div *ngFor="let user of getUserData()">
+        <form name="myForm">
+
+            <ion-item>
+                <ion-label floating>Username</ion-label>
+                <ion-input type="text" class="inputText" required #name value={{user.name}}></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input input type="email" class="inputText" required #email value={{user.email}}></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="password" class="inputText" required ng-minlength="6" #pass></ion-input>
+            </ion-item>
+            <ion-item>
+
+                <button (click)="editData(name.value,email.value,pass.value)" ion-button full icon-left>Apply change</button>
+            </ion-item>
+        </form>
+    </div>
+</ion-content>

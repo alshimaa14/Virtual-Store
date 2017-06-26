@@ -1,0 +1,22 @@
+body > ion-app > ng-component > ion-nav > page-login > ion-content > div.scroll-content > ion-grid > ion-item:nth-child(4) > div.item-inner, 
+body > ion-app > ng-component > ion-nav > page-login > ion-content > div.scroll-content > ion-grid > ion-item:nth-child(5) > div.item-inner{
+    border-bottom:none;
+}
+
+.button{
+    background: color($colors,pLight);
+    // height:2em;
+
+}
+ div.item-inner > div > ion-label > button > span,body > ion-app > ng-component > ion-nav > page-register > ion-content > div.scroll-content > form > ion-item:nth-child(12) > div.item-inner > div > ion-label > button > span{
+    justify-content:center;
+}
+
+.button:active{
+    background: color($colors,secondary);
+    color:color($colors,textOnS)
+}
+
+.label-md{
+    margin:2px 0px;
+}

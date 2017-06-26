@@ -1,0 +1,47 @@
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+//   .card-title {
+//     position: relative;
+//     bottom: 0;
+//     font-size: 1.5em;
+//     width: 100%;
+//     color: color($colors,textOnP);
+//     background-color:color($colors,pLight);
+//   }
+ 
+
+  img{
+      max-width: none;
+  }
+
+  .ion-card{
+    margin:none;
+  }
+  #productsNum{
+      width:25%;
+  }
+
+.button{
+    background: color($colors,pLight);
+    // height:2em;
+
+}
+ body > ion-app > ng-component > ion-nav > page-product > ion-content > div.scroll-content > ion-card > ion-row:nth-child(5) > ion-col > button > span{
+    justify-content:center;
+}
+
+.button:active{
+    background: color($colors,secondary);
+    color:color($colors,textOnS)
+}
+
+.card .note-md{
+    font-size: 1em;
+    background: mediumslateblue;
+    color:color($colors,textOnS);
+    padding:5px;
+}

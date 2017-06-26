@@ -1,0 +1,38 @@
+<ion-header>
+    <header myTitle="Home"></header>
+</ion-header>
+
+<ion-content has-header>
+
+    <ion-card>
+        <!--<img src="/assets/img/VRC.jpg" />-->
+        <ion-card-content>
+            <img src="https://image.ibb.co/kLrPJQ/VRC.jpg" />
+        </ion-card-content>
+    </ion-card>
+
+    <ion-grid>
+
+        <button (click)="scanBarCode()" ion-button block id="scanBtn" large>
+            <i class="fa fa-barcode" aria-hidden="true" style="margin:10px;"></i>Scan to Shop
+        </button>
+
+        <button (click)="showCategories()" ion-button block icon-left large>
+            <i class="fa fa-shopping-basket" aria-hidden="true" style="margin:10px;"></i>Show Products
+            </button>
+
+        <button (click)="showCart()" ion-button block icon-left large>
+            <i class="fa fa-shopping-cart" aria-hidden="true" style="margin:10px;"></i> Shopping Cart
+            </button>
+
+        <button (click)="showHistory()" ion-button block icon-left large>
+            <i class="fa fa-history" aria-hidden="true" style="margin:10px;"></i> Orders History
+            </button>
+
+        <button (click)="showProfile()" ion-button block icon-left large>
+            <i class="fa fa-user-circle" aria-hidden="true" style="margin:10px;"></i>Personal Profile
+            </button>
+
+    </ion-grid>
+
+</ion-content>

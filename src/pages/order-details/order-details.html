@@ -1,0 +1,31 @@
+<ion-header>
+
+    <header myTitle="Order Details"></header>
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+    <div class="row header">
+        <div class="col">product name</div>
+        <div class="col">quantity</div>
+        <div class="col">price</div>
+    </div>
+    <div *ngFor="let product of Orderdetails">
+        <div class="row">
+            <div class="col">{{product.name}}</div>
+            <div class="col">{{product.orderquantity}}</div>
+            <div class="col">{{product.orderquantity*product.unitprice}}</div>
+        </div>
+    </div>
+
+    <div>
+        <br/> Orderd at: {{ordertime}}<br/> Total Salary: {{totalprice}}
+    </div>
+
+    <br/>
+    <button (click)="backBtn()" ion-button full>OK</button>
+
+</ion-content>

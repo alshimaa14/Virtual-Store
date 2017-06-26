@@ -1,0 +1,47 @@
+<ion-header>
+
+    <header myTitle={{cat_name}}></header>
+
+</ion-header>
+<ion-content has-header>
+    <ion-content class="card-background-page" *ngIf="products.length >0">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6 *ngFor="let product of products">
+
+                    <ion-card>
+                        <img src="{{product.image}}" (click)="showProduct($event,product.idproduct,product.name)" />
+                        <div class="card-title" (click)="showProduct($event,product.idproduct,product.name)" style="font-size: 1.5em">{{product.name}}</div>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <div *ngIf="products.length == 0" style="text-align:center;color:grey">
+            <h4>Empty</h4>
+        </div>
+
+    </ion-content>
+</ion-content>
+
+
+<!--<ion-content padding>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6 *ngFor="let product of products">
+                <ion-card>
+                    <img src="../../assets/img/mobile.jpeg" (click)="showProduct($event,product.idproduct,product.name)">
+                    <ion-row>
+                        <ion-col center text-center>
+                            <ion-note>
+                                {{product.name}}
+                            </ion-note>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>-->

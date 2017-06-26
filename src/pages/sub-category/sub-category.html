@@ -1,0 +1,50 @@
+<ion-header>
+
+    <header myTitle={{cat_name}}></header>
+
+</ion-header>
+
+<ion-content class="card-background-page">
+
+    <div *ngIf="subcatagories.length > 0">
+        <ion-card *ngFor="let catagory of subcatagories">
+            <img src="{{catagory.image}}" (click)="showProductsList($event,catagory.idcategory,catagory.name)" />
+            <div class="card-title" (click)="showProductsList($event,catagory.idcategory,catagory.name)">{{catagory.name}}</div>
+        </ion-card>
+    </div>
+
+    <div *ngIf="subcatagories.length == 0" style="text-align:center; color:grey">
+        <h4>Empty</h4>
+    </div>
+
+</ion-content>
+
+
+<!--
+<ion-content padding>
+
+    <ion-grid>
+
+        <ion-row *ngIf="subcatagories.length == 0">
+            <ion-col>
+                <h2>Empty</h2>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="subcatagories.length > 0">
+            <ion-col col-6 *ngFor="let catagory of subcatagories">
+                <ion-card>
+                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList($event,catagory.idcategory,catagory.name)" />
+                    <ion-card-content>
+                        <ion-card-title text-center (click)="showProductsList($event,catagory.idcategory,catagory.name)">
+                            <a href="#" id="catName">{{catagory.name}}</a>
+                        </ion-card-title>
+                        <p>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>-->

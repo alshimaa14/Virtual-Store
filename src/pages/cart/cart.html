@@ -1,0 +1,38 @@
+<ion-header>
+    <header myTitle="Cart"></header>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row class="header" *ngIf="checkArrLength()>0">
+            <ion-col col-5>Name</ion-col>
+            <ion-col col-2>Num</ion-col>
+            <ion-col col-4>Price</ion-col>
+            <ion-col col-1></ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let product of Listproducts()">
+            <ion-col col-5 id="productWrapper">{{product.name}}</ion-col>
+            <ion-col col-2><input class="quanitityWrapper" id="inputNum" type="number" [(ngModel)]="product.quantity" (change)="updateSelectedQuantity(product.idproduct,product.quantity)"
+                     min="1" max="100" step="1" ></ion-col>
+            <ion-col col-4 id="priceWrapper">{{product.price*product.quantity}} LE</ion-col>
+            <ion-col col-1 id="deleteWrapper"><button class="button" id="inputdelete" style="background-color:white" (click)="deleteProduct(product.idproduct)"><ion-icon name="md-trash"></ion-icon></button></ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <div *ngIf="checkArrLength()>0">
+        <button (click)="deleteAll()" ion-button full>delete all</button>
+    </div>
+    <div *ngIf="checkArrLength()>0">
+        <button (click)="continueShopping()" ion-button full>Continue shopping</button>
+    </div>
+    <div *ngIf="checkArrLength()>0">
+        <button (click)="checkOut()" ion-button full>Checkout</button>
+    </div>
+
+    <div *ngIf="checkArrLength()==0" id="emptyDiv">
+        <span>Empty</span>
+    </div>
+
+</ion-content>

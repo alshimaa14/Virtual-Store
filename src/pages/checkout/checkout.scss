@@ -1,0 +1,27 @@
+.button{
+    background: color($colors,pLight);
+    // height:2em;
+
+}
+  body > ion-app > ng-component > ion-nav > page-checkout > ion-content > div.scroll-content > button > span{
+    justify-content:center;
+}
+
+.button:active{
+    background: color($colors,secondary);
+    color:color($colors,textOnS)
+}
+
+ion-datetime, ion-select{
+    max-width:none;
+    border-bottom: 1px solid #dedede;
+    padding: none;
+    width:100%;
+}
+
+#checkout{
+    background: color($colors,secondary);
+    font-weight: bold;
+    font-size:100%;
+}
+

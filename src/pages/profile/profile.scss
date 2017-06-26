@@ -1,0 +1,59 @@
+// page-profile {
+//     #bottomCard {
+//         margin-top: 40px;
+//     }
+//     .card-background-page {
+//         ion-card {
+//             position: relative;
+//             text-align: center;
+//         }
+//         .card-title {
+//             position: absolute;
+//             top: 36%;
+//             font-size: 2.0em;
+//             width: 100%;
+//             font-weight: bold;
+//             color: #fff;
+//         }
+//     }
+// }
+#profile{
+    // font-weight: bold;
+    // font-size:100%;
+    color:color($colors,pDark);
+    text-align:left;
+}
+
+input{
+    width:50%;
+}
+
+#bottomCard > div > ion-list > ion-list:nth-child(3) > ion-grid > ion-row > ion-col:nth-child(2) > ion-icon{
+padding-top:35px;
+font-size:2em;
+}
+
+#addicon {
+    font-size: 2.8em;
+    padding-top:20px;
+
+}
+
+.profile{
+        border-bottom: 1px solid #dedede;
+
+}
+.addresses{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-bottom: 1px solid #dedede;
+}
+.addresses:last-child{
+
+    border-bottom: none;
+}
+
+#bottomCard > div > ion-list > ion-item:nth-child(3) > div.item-inner > div > ion-label > button, #bottomCard > div > ion-list > ion-item:nth-child(8) > div.item-inner > div > ion-label > button{
+    background: color($colors,pLight);
+    height:3em;
+}

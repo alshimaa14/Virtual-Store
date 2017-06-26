@@ -1,0 +1,71 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Register</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <form name="myForm" novalidate>
+        <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" class="inputText" required #username></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input input type="email" class="inputText" required #email></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Mobile</ion-label>
+            <ion-input type="tel" class="inputText" required #mobile></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+
+            <button (click)="get_location($event)" ion-button full large>Get location</button>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Country</ion-label>
+            <ion-input type="text" class="inputText" required #country value="{{getCountry()}}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>City</ion-label>
+            <ion-input type="text" class="inputText" required #city value="{{getCity()}}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Street</ion-label>
+            <ion-input type="text" class="inputText" required #state value="{{getStreet()}}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" class="inputText" required ng-minlength="6" #password></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Confirm Password</ion-label>
+            <ion-input type="password" class="inputText" required ng-minlength="6" #confirmPass></ion-input>
+        </ion-item>
+        <br>
+
+        <ion-item>
+            <button (click)="register(username.value,email.value,mobile.value,country.value,city.value,state.value,password.value,confirmPass.value)" ng-disabled="myForm.$invalid" ion-button block large>Register</button>
+        </ion-item>
+        <br><br>
+
+    </form>
+
+</ion-content>
