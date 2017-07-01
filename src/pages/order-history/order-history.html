@@ -4,15 +4,25 @@
 
 </ion-header>
 
-
-
 <ion-content padding>
-
-    <div *ngIf="getUserOders().length > 0">
-        <ion-list *ngFor="let order of getUserOders();" style="text-align:center">
-            <button (click)="showOrderHistory(order.idorder,order.ordertime,order.deliverytime,order.totalprice)"><a href=""> {{ order.ordertime}}</a></button>
-        </ion-list>
-    </div>
+    <ion-list *ngIf="getUserOders().length > 0" >
+        <ion-list-header>
+            Swipe Right For Order Details
+        </ion-list-header>
+        <ion-item-sliding *ngFor="let order of getUserOders();" >
+            <ion-item>
+                <ion-avatar item-start>
+                    <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+                </ion-avatar>
+                <h2>{{order.ordertime | date:'medium'}}</h2>
+            </ion-item>
+            <ion-item-options side="left">
+                <button ion-button (click)="showOrderHistory(order.idorder,order.ordertime,order.deliverytime,order.totalprice)">
+                    <i class="fa fa-question-circle fa-2x" aria-hidden="true"></i>
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
 
     <div *ngIf="getUserOders().length == 0" style="text-align:center; color:grey">
         <h4>Empty</h4>

@@ -3,6 +3,7 @@ import { NavController, NavParams ,ToastController } from 'ionic-angular';
 import { CheckoutPage } from "../checkout/checkout";
 import { CartProductsService } from "../../Services/cartProducts.sevice";
 import { Storage } from '@ionic/storage';
+import { CategoriesPage } from '../categories/categories';
 
 @Component({
   selector: 'page-cart',
@@ -50,7 +51,7 @@ export class CartPage {
   }
 
   continueShopping() {
-    this.navCtrl.pop();
+    this.navCtrl.push(CategoriesPage);
   }
 
   deleteProduct(id:number) {

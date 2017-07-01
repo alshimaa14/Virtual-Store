@@ -1,43 +1,41 @@
 page-cart {
-
+    #clearAll {
+        float: left;
+    }
+    #back {
+        float: right;
+    }
     .header .col {
         background-color: color($colors, pLight);
     }
-
-    #productWrapper, #priceWrapper{
-        padding-top:0.8em;
+    #productWrapper,
+    #priceWrapper {
+        padding-top: 0.8em;
     }
-
-    #inputNum{
+    #inputNum {
         width: 80%;
     }
-
-ion-grid{
-    display: table;
-    
-}
-ion-row{
-    display: table-row;
-}
-
-ion-col{
-    display: table-column;
-            vertical-align: middle;
+    ion-grid {
+        display: table;
+    }
+    ion-row {
+        display: table-row;
+    }
+    ion-col {
+        display: table-column;
+        vertical-align: middle;
         text-align: center;
         border: 1px solid color($colors, pDark);
         border-bottom: none;
-        border-right:none;
-}
-
-ion-col:last-child{
-    border-right:1px solid color($colors, pDark);
-}
-
-ion-row:last-child{
-    border-bottom:1px solid color($colors, pDark);
-}
-
-#inputdelete{
-    padding:0;
-}
+        border-right: none;
+    }
+    ion-col:last-child {
+        border-right: 1px solid color($colors, pDark);
+    }
+    ion-row:last-child {
+        border-bottom: 1px solid color($colors, pDark);
+    }
+    #inputdelete {
+        padding: 0;
+    }
 }

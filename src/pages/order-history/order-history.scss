@@ -1,1 +1,30 @@
-page-order-history {}
+page-order-history {
+
+    ion-list-header, .list-header-md{
+        border-top:none;
+        border-bottom:1px solid #dedede;
+
+    }
+
+    .button{
+        background: color($colors,secondary);
+        width:2.5em;
+    }
+    ion-item-options{
+            height:100%;
+            margin-right:none;
+            border:0px;
+    }
+
+    ion-item-sliding{
+            border-bottom:1px solid #dedede;
+
+    }
+    .item, .item-block, .item-md{
+        border:none;
+    }
+
+     .item-wrapper.active-slide.active-options-left.active-swipe-left > ion-item-options{
+        border:none;
+    }
+}

@@ -1,25 +1,29 @@
 page-order-details {
-    #inputNum {
-        width: 80%;
-        height: 1005;
-    }
-    body {
-        cursor: url('http://ionicframework.com/img/finger.png'), auto;
-    }
     .header .col {
-        background-color: lightgrey;
+        background-color: color($colors, pLight);
     }
-    .col {
+
+    ion-grid {
+        display: table;
+    }
+    ion-row {
+        display: table-row;
+    }
+    ion-col {
+        display: table-column;
         vertical-align: middle;
         text-align: center;
-        border: solid 1px grey;
-        border-bottom-style: none;
-        border-right-style: none;
+        border: 1px solid color($colors, pDark);
+        border-bottom: none;
+        border-right: none;
     }
-    .col:last-child {
-        border-right: solid 1px grey;
+    ion-col:last-child {
+        border-right: 1px solid color($colors, pDark);
     }
-    .row:last-child .col {
-        border-bottom: solid 1px grey;
+    ion-row:last-child {
+        border-bottom: 1px solid color($colors, pDark);
     }
+
+
+
 }

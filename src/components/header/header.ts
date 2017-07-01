@@ -33,7 +33,7 @@ export class HeaderComponent {
   }
 
   showCartPage() {
-    this.navCtrl.push(CartPage);
+    this.navCtrl.setRoot(CartPage);
   }
 
   ngAfterViewInit() {
